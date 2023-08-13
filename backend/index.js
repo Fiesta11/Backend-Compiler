@@ -67,7 +67,7 @@ app.post("/run" , async(req , res) =>{
       return res.status(500).json({success : false , err : JSON.stringify(err) })
   }
 })
-
-app.listen(5000 , () => {
+const PORT = process.env.PORT || 5000
+app.listen(PORT , () => {
     console.log("Listening on port 5000");
 })
